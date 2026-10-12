@@ -35,3 +35,5 @@ btnLowCase.addEventListener('click', function(){
         container.append(newTask) //добовляем задачу в конетйнер задач
     }
 })
+
+// сортировка по имени задачи по алфавиту
