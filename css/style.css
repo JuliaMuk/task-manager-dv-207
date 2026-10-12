@@ -1,5 +1,5 @@
 body {
-    background-color: lavender;
+    background-color: rgb(218, 253, 230);
     height: 100vh;
 }
 .container {
@@ -7,7 +7,7 @@ body {
     margin: 0 auto;
 }
 .tasks {
-    border: 1px solid darkblue;
+    border: 1px solid darkgreen;
     min-height: 200px;
     border-radius: 20px;
     padding: 25px;
@@ -15,11 +15,11 @@ body {
 }
 
 .task {
-    border-bottom: 1px solid darkblue;
+    border-bottom: 1px solid darkgreen;
     margin: 10px 0;
     padding: 10px;
     font-size: 16px;
-    background-color: rgba(224, 255, 255, 0.59);
+    background-color: rgba(179, 249, 249, 0.59);
 }
 .filters {
     margin-top: 20px;
