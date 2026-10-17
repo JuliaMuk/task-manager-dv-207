@@ -41,19 +41,4 @@ btnLowCase.addEventListener('click', function(){
     }
 })
 
-// сортировка по имени задачи по алфавиту
-function compare(a,b){
-    if(a.innerHTML > b.innerHTML) return 1
-    if(a.innerHTML == b.innerHTML) return 0
-    if(a.innerHTML < b.innerHTML) return -1
-}
 
-const btnSort = document.getElementById("sort1")
-
-btnSort.addEventListener("click", function(){
-    let newTasks = [...tasks].sort(compare);
-    container.innerHTML = "";
-    for (let i in newTasks){ //перебираем массив и для каждого элемента создаем запись в контейнере
-        container.append(newTasks[i]) //добовляем задачу в конетйнер задач
-    }
-})
