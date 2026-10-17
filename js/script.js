@@ -11,9 +11,14 @@ formAddTask.addEventListener('submit', function(event){
     let newTask = document.createElement("div"); //создаем пустой тег div для задачи
     newTask.innerHTML = `<span>${nameTask}</span>` //добавляем текст задачи в div
     newTask.classList.add('task') //добовляем у div класс task
+
+    if(formAddTask.querySelector("#immediate").checked){
+        newTask.classList.add("immediate")
+    }
+
     container.append(newTask) //добовляем задачу в конетйнер задач
 
-    tasks.push(nameTask) //добавляем задачу в массив
+    tasks.push(newTask) //добавляем задачу в массив
 })
 
 
@@ -37,3 +42,18 @@ btnLowCase.addEventListener('click', function(){
 })
 
 // сортировка по имени задачи по алфавиту
+function compare(a,b){
+    if(a.innerHTML > b.innerHTML) return 1
+    if(a.innerHTML == b.innerHTML) return 0
+    if(a.innerHTML < b.innerHTML) return -1
+}
+
+const btnSort = document.getElementById("sort1")
+
+btnSort.addEventListener("click", function(){
+    let newTasks = [...tasks].sort(compare);
+    container.innerHTML = "";
+    for (let i in newTasks){ //перебираем массив и для каждого элемента создаем запись в контейнере
+        container.append(newTasks[i]) //добовляем задачу в конетйнер задач
+    }
+})
